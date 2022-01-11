@@ -1,7 +1,7 @@
 package com.example.movie.wishlist.repository;
 
-import com.example.movie.wishlist.entity.WishListEntity;
-import com.example.movie.wishlist.entity.WishListEntity;
+import com.example.mini.wishlist.entity.WishListEntity;
+import com.example.mini.wishlist.repository.WishListRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

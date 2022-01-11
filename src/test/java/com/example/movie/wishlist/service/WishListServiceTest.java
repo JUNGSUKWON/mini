@@ -1,5 +1,6 @@
 package com.example.movie.wishlist.service;
 
+import com.example.mini.wishlist.service.WishListService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

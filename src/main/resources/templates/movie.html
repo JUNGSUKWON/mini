@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>헬로월드</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>헬로월드</h2>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/main">메인(홈)</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/movie">영화검색</a>
+        </li>
+
+    </ul>
+<h5>영화검색</h5>
+<div class="form-inline">
+    <div class="form-group">
+        <label for="data" class="mb-2 mr-sm-2">입력</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="data" placeholder="영화 검색" name="data">
+    </div>
+    <button type="button" id="inputbtn" class="btn btn-primary mb-2">검색</button>
+</div>
+<br><br>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>이미지</th>
+        <th>제목</th>
+        <th>감독</th>
+    </tr>
+    </thead>
+    <tbody id="newslist">
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function(){
+    $("#inputbtn").click(function(){
+      $.ajax({
+        url : "/api/v1/news",
+        type : "get",
+        dataType : 'json',
+        contentType : 'application/json; charset=utf-8',
+        data : {
+          data: $("#data").val()
+        },
+        success : function(result){
+          console.log(result.items);
+            var html = "";
+            $.each(result.items, function(i, field){
+                console.log(field.title);
+                html += "<tr>";
+                html += "<td><img src='" + field.image + "'></td>";
+                html += "<td>" + field.title + "</td>";
+                html += "<td>" + field.director + "</td>";
+                html += "</tr>";
+            });
+            $("#newslist").empty();  // 비우고 다시 출력 하기 위해
+            $("#newslist").append(html);
+        },
+        error : function(xhr, status, error){
+            alert("통신 에러");
+        }
+    });
+    });
+  });
+
+</script>
+</div>
+
+</body>
+</html>
