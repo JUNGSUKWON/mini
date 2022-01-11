@@ -8,6 +8,7 @@ class MiniApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
