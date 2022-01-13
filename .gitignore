@@ -1,3 +1,8 @@
+application-apikey.properties
+application-db.properties
+application-oauth.properties
+
+
 HELP.md
 .gradle
 build/

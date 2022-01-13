@@ -11,10 +11,10 @@ public class ApiController {
 
     private final NaverApiService naverApiService;
 
-    @GetMapping("/api/v1/news")
+    @GetMapping("/api/v1/movie")
     public String news(@RequestParam(value = "data", defaultValue = "없음") String data) {
         System.out.println(data);
-        return naverApiService.searchNews(data);
+        return naverApiService.searchMovie(data);
     }
 
 }

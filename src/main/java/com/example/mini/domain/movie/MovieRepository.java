@@ -1,4 +1,4 @@
-package com.example.mini.domain;
+package com.example.mini.domain.movie;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

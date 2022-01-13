@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class NaverApiService {
     private final NaverAPI api;
-    public String searchNews(String data) {
-        return api.searchNews(data);
+    public String searchMovie(String data) {
+        return api.searchMovie(data);
     }
 }

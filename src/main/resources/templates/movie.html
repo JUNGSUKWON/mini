@@ -37,6 +37,7 @@
         <th>이미지</th>
         <th>제목</th>
         <th>감독</th>
+        <th>평점</th>
     </tr>
     </thead>
     <tbody id="newslist">
@@ -47,7 +48,7 @@
     $(document).ready(function(){
     $("#inputbtn").click(function(){
       $.ajax({
-        url : "/api/v1/news",
+        url : "/api/v1/movie",
         type : "get",
         dataType : 'json',
         contentType : 'application/json; charset=utf-8',
@@ -63,6 +64,7 @@
                 html += "<td><img src='" + field.image + "'></td>";
                 html += "<td>" + field.title + "</td>";
                 html += "<td>" + field.director + "</td>";
+                 html += "<td>" +field.userRating + "</td>";
                 html += "</tr>";
             });
             $("#newslist").empty();  // 비우고 다시 출력 하기 위해

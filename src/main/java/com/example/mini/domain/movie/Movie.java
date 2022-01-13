@@ -1,4 +1,4 @@
-package com.example.mini.domain;
+package com.example.mini.domain.movie;
 
 import lombok.*;
 import javax.persistence.*;
@@ -43,5 +43,4 @@ public class Movie {
         this.actor = actor;
         this.userRating = userRating;
     }
-
 }

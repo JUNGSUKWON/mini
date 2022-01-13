@@ -9,14 +9,14 @@ import java.util.*;
 
 @Component
 public class NaverAPI {
-    public String searchNews(String str) {
+    public String searchMovie(String str) {
 
         String clientId = "03k0MM7ry0DPruhStVY2"; //애플리케이션 클라이언트 아이디값"
         String clientSecret = "WW8_nH8ww8"; //애플리케이션 클라이언트 시크릿값"
 
         String text = null;
         try {
-            text = URLEncoder.encode(str, "UTF-8");
+            text = URLEncoder.encode(str, "utf-8");
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException("검색어 인코딩 실패",e);
         }
