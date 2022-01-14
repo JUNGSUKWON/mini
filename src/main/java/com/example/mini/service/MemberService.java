@@ -1,8 +1,9 @@
 package com.example.mini.service;
 
-import com.example.mini.domain.user.*;
-import com.example.mini.dto.SignupRequestDto;
+import com.example.mini.domain.user.Member;
 import com.example.mini.domain.user.MemberRepository;
+import com.example.mini.domain.user.Role;
+import com.example.mini.dto.SignupRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

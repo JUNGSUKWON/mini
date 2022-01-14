@@ -2,7 +2,7 @@ package com.example.mini.config.auth;
 
 import com.example.mini.domain.user.User;
 import com.example.mini.domain.user.UserRepository;
-import com.example.mini.domain.user.UserRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -11,6 +11,7 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
+
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;

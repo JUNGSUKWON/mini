@@ -1,4 +1,4 @@
-package com.example.mini.controller;
+package com.example.mini.web;
 
 
 import com.example.mini.dto.SignupRequestDto;
