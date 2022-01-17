@@ -20,6 +20,11 @@ public class PageController {
 //        return "index";
 //    }
     @GetMapping("/")
+    public String index(){
+        return "index";
+    }
+
+    @GetMapping("/main")
     public String main(){
         return "main";
     }
